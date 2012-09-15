@@ -43,6 +43,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem 'bootstrap-sass'
+gem 'twitter-bootstrap-rails', :git => "git://github.com/seyhunak/twitter-bootstrap-rails.git", :branch => "static" 
 
 gem 'devise'
+
+gem 'rails_admin'

@@ -1,0 +1,27 @@
+<h1>Listing class_takens</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Duration</th>
+    <th>Equipment used</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @class_takens.each do |class_taken| %>
+  <tr>
+    <td><%= class_taken.name %></td>
+    <td><%= class_taken.duration %></td>
+    <td><%= class_taken.equipment_used %></td>
+    <td><%= link_to 'Show', class_taken %></td>
+    <td><%= link_to 'Edit', edit_class_taken_path(class_taken) %></td>
+    <td><%= link_to 'Destroy', class_taken, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Class taken', new_class_taken_path %>

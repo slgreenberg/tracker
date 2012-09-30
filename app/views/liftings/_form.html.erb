@@ -1,0 +1,33 @@
+<%= form_for(@lifting) do |f| %>
+  <% if @lifting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lifting.errors.count, "error") %> prohibited this lifting from being saved:</h2>
+
+      <ul>
+      <% @lifting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :duration %><br />
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :exercises %><br />
+    <%= f.text_area :exercises %>
+  </div>
+  <div class="field">
+    <%= f.label :total_reps %><br />
+    <%= f.number_field :total_reps %>
+  </div>
+  <div class="field">
+    <%= f.label :sets %><br />
+    <%= f.number_field :sets %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Listing liftings</h1>
+
+<table>
+  <tr>
+    <th>Duration</th>
+    <th>Exercises</th>
+    <th>Total reps</th>
+    <th>Sets</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @liftings.each do |lifting| %>
+  <tr>
+    <td><%= lifting.duration %></td>
+    <td><%= lifting.exercises %></td>
+    <td><%= lifting.total_reps %></td>
+    <td><%= lifting.sets %></td>
+    <td><%= link_to 'Show', lifting %></td>
+    <td><%= link_to 'Edit', edit_lifting_path(lifting) %></td>
+    <td><%= link_to 'Destroy', lifting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lifting', new_lifting_path %>

@@ -1,4 +1,8 @@
 Tracker::Application.routes.draw do
+  resources :liftings
+
+  resources :class_takens
+
   devise_for :users
 
   resources :workouts
@@ -52,7 +56,7 @@ Tracker::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => 'workouts#index'
 
   # See how all your routes lay out with "rake routes"
 
